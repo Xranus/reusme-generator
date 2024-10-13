@@ -64,7 +64,7 @@ nav li a{
     .nav-menu{
         position: fixed;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.);
+        background-color: rgba(255, 255, 255, 0.1);
         padding: 0;
         margin-top: 70px;
         flex-direction: column;
