@@ -15,7 +15,7 @@ function Landing() {
         <div className='landingButtons' data-aos="zoom-in-up">
           <button><span>Start Making</span><GoArrowRight className='forwardArrow' /></button>
         </div>
-        <div className='landingImage'>
+        <div className='landingImage' data-aos="zoom-in-down">
           <img src="https://cdn-icons-png.freepik.com/256/13386/13386846.png?semt=ais_hybrid" alt="resume" />
           <p className='popUp'>Make It Look Professional</p>
         </div>
