@@ -1,9 +1,11 @@
 nav{
     display: flex;
     justify-content: space-between;
-    width: 90vw;
+    width: 100%;
+    padding: 0 5%;
     margin: auto;
     max-height: fit-content;
+    box-sizing: border-box;
 }
 
 nav p{
@@ -133,8 +135,8 @@ nav li a{
 .ssteps li{
     list-style: none;
     border: 2px solid #6A9AB0;
-    padding: 2em;
-    margin: 12px;
+    padding: 2rem;
+    margin: 12px 2px;
     width: 50%;
     float: left;
     position: relative;
@@ -143,7 +145,7 @@ nav li a{
         height:64%;
         border-top:2px solid #6A9AB0;
         border-right:2px solid #6A9AB0;
-        width:25%;
+        width:15%;
         position:absolute;
         left:100%;
         top:50%;
@@ -165,41 +167,7 @@ nav li a{
 }
 
 
-/* .landingImage{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    perspective: 500px;
-    transition: all 0.15s;
-    margin-top: 5rem;
-} */
-/* .landingImage:hover img{
-    transform: rotateX(45deg);
-}
-.landingImage:hover .popUp{
-    font-size: 50px;
-    opacity: 1;
-}
-.landingImage img{
-    position: absolute;
-    max-height: 250px;
-    padding: 12px;
-    transform-style: preserve-3d;
-    transform: rotateX(0deg);
-    transition: all 0.15s;
-    color: hsl(195, 100%, 50%);
-    mix-blend-mode: color;
-    filter: drop-shadow(19px 7px 10px #6A9AB0) drop-shadow(-19px -7px 10px #6A9AB0);
-    
-}
 
-.popUp{
-    font-size: 2px;
-    opacity: 0;
-    font-weight: 700;
-    transition: all 0.15s;
-    text-shadow: #3A6D8C 5px 3px 2px;
-} */
 
 @media only screen and (max-width: 480px) {
     .nav-menu{
@@ -235,7 +203,30 @@ nav li a{
         left: 0;
         width: 60%;
     } 
+    .landingContent{
+        max-width: 480px;
+        overflow: hidden;
+    }
+    .landingButtons button{
+        font-size: 12px;
+    }
+    .keyFeatures li{
+        width: 270px;
+    }
     .ssteps{
-        width: 470px;
+        max-width: 480px;
+        margin: 0;
+        margin-inline: 4%;
+    }
+    .ssteps li{
+        :after{
+            display: none;
+        }
+    }
+    .ssteps li:nth-child(even){
+        float: left;
+        :after{
+            display: none;
+        }
     }
 }

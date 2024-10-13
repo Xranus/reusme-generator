@@ -1,42 +1,45 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react';
 import { FaDownload } from "react-icons/fa6";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { HiCursorArrowRipple } from "react-icons/hi2";
-import Background from './Background'
-import { GoArrowRight } from "react-icons/go"
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import { GoArrowRight } from "react-icons/go";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function Landing() {
-  const LearnRef = useRef(null)
+  const LearnRef = useRef(null);
+
   function handleScroll() {
-    LearnRef.current?.scrollIntoView({behavior: 'smooth'})
+    LearnRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  useEffect(()=>{
-    Aos.init()
-  },[])
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
-    <div className='landing'>
+    <div className="landing">
       <div className="landingContent">
-        <h1 className='headingText' data-aos="zoom-in-down">Build and Download Your Resume Now <br /> Simple, Fast, Professional</h1>
-        <div className='landingButtons' data-aos="zoom-in-up">
-          <button style={{
-            backgroundColor: 'transparent', 
-            padding:'11px 19px', 
-            border:'1px solid #3A6D8C'
-            }} onClick={handleScroll}>
+        <h1 className="headingText" data-aos="zoom-in-down">
+          Build and Download Your Resume Now <br /> Simple, Fast, Professional
+        </h1>
+        <div className="landingButtons" data-aos="zoom-in-up">
+          <button 
+            style={{
+              backgroundColor: 'transparent',
+              padding: '11px 19px',
+              border: '1px solid #3A6D8C'
+            }} 
+            onClick={handleScroll}>
             Learn More
           </button>
-          <button><span>Start Making</span><GoArrowRight className='forwardArrow' /></button>
+          <button><span>Start Making</span><GoArrowRight className="forwardArrow" /></button>
         </div>
-        {/* <div className='landingImage' data-aos="zoom-in-down">
-          <img src="/src/assets/icon.svg" alt="resume" />
-          <p className='popUp'>Make It Look Professional</p>
-        </div> */}
-        <section className='learnMore' ref={LearnRef}>
+
+        <section className="learnMore" ref={LearnRef}>
           <h2>Learn More</h2>
-          <div className='keyFeatures'>
-            <h3>Key Features</h3>
+          <div className="keyFeatures">
+            <h3 style={{marginLeft: '12px'}}>Key Features</h3>
             <ul>
               <li data-aos="fade-right">Customizable Templates
                 <p>A number of templates available.</p>
@@ -49,9 +52,9 @@ function Landing() {
               </li>
             </ul>
           </div>
-          <div className='steps'>
-            <h3>How It Works (Steps)</h3>
-            <ul className='ssteps'>
+          <div className="steps">
+            <h3 style={{marginLeft: '12px'}}>How It Works (Steps)</h3>
+            <ul className="ssteps">
               <li>
                 <HiCursorArrowRipple />
                 <p>Select a Template</p>
@@ -70,13 +73,12 @@ function Landing() {
             </ul>
           </div>
         </section>
-        <div className='landingButtons' >
-          <button><span>Start Making</span><GoArrowRight className='forwardArrow' /></button>
+        <div className="landingButtons">
+          <button><span>Start Making</span><GoArrowRight className="forwardArrow" /></button>
         </div>
-        
       </div>
     </div>
-  )
+  );
 }
 
-export default Landing
+export default Landing;

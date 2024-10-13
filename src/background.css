@@ -20,7 +20,7 @@
     margin: 0;
     padding: 0;
     background: #001F3F;
-    overflow: hidden;
+    overflow: none;
     z-index: -999;
 }
 .background li {
