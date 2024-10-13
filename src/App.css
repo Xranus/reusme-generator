@@ -16,14 +16,14 @@ nav p a{
 nav li{
     list-style: none;
     font-size: 20px;
-    
+    transition: all 0.15s;
     ::after{
         content: '';
         height: 2px;
         width: 0px;
         position: absolute;
         background-color: rgb(255, 244, 222);
-        transition: all 0.15s;
+        transition: all 0.5s;
         bottom: 0;
         left: 0;
         border-radius: 2px;
@@ -31,10 +31,11 @@ nav li{
     :hover::after{
         width: 100%;
     }
-    :hover{
-        transform: translateY(12px) scale(1.4);
-    }
 }
+nav li:hover{
+    transform: translateY(-3px) scale(1.2);
+}
+
 .nav-menu{
     display: flex;
     gap: 30px;
@@ -60,6 +61,82 @@ nav li a{
     border-radius: 3px;
     transition: all 0.15s;
 }
+
+.landing{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.headingText{
+    text-align: center;
+}
+.landingButtons{
+    display: flex;
+    justify-content: center;
+}
+.landingButtons button{
+    background-color: #3A6D8C;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: all 0.15s;
+}
+.landingButtons button span{
+    position: relative;
+    left: 10px;
+    transition: all 0.15s;
+}
+.landingButtons button:hover span{
+    left: 0;
+}
+.landingButtons button:hover .forwardArrow{
+    opacity: 1;
+    translate: 0px;
+}
+.forwardArrow{
+    position: relative;
+    top: 3px;
+    translate: -30px;
+    opacity: 0;
+    transition: all 0.15s;
+}
+.landingImage{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    perspective: 500px;
+    transition: all 0.15s;
+}
+.landingImage:hover img{
+    transform: rotateX(45deg);
+}
+.landingImage:hover .popUp{
+    font-size: 50px;
+    opacity: 1;
+}
+.landingImage img{
+    position: absolute;
+    max-height: 250px;
+    padding: 12px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+    transition: all 0.15s;
+    color: hsl(195, 100%, 50%);
+    mix-blend-mode: color;
+    filter: drop-shadow(19px 7px 10px #6A9AB0) drop-shadow(-19px -7px 10px #6A9AB0);
+    
+}
+
+.popUp{
+    font-size: 2px;
+    opacity: 0;
+    font-weight: 700;
+    transition: all 0.15s;
+    text-shadow: #3A6D8C 5px 3px 2px;
+}
+
 @media only screen and (max-width: 480px) {
     .nav-menu{
         position: fixed;
@@ -70,6 +147,8 @@ nav li a{
         left: -100%;
         backdrop-filter: blur(15px);
         height: 100vh;
+        margin-top: 0;
+        z-index: 999;
     }
     .nav-menu li{
         margin-top: 30px;
@@ -91,5 +170,5 @@ nav li a{
     .nav-menu.active{
         left: 0;
         width: 80%;
-    }
+    } 
 }
