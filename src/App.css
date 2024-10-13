@@ -65,7 +65,7 @@ nav li a{
 .landing{
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 12rem;
 }
 .headingText{
     text-align: center;
@@ -82,6 +82,7 @@ nav li a{
     cursor: pointer;
     padding: 12px 20px;
     transition: all 0.15s;
+    margin: 12px;
 }
 .landingButtons button span{
     position: relative;
@@ -102,15 +103,77 @@ nav li a{
     opacity: 0;
     transition: all 0.15s;
 }
-.landingImage{
+.learnMore{
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+}
+.learnMore h2{
+    text-align: center;
+}
+.keyFeatures ul{
+    padding: 0;
+}
+.keyFeatures li{
+    border: 1px solid #6A9AB0;
+    list-style: none;
+    padding: 0;
+    padding: 12px 20px;
+    font-weight: 500;
+    margin: 12px;
+    transition: all 0.15s;
+}
+.keyFeatures li p{
+    font-weight: 100;
+}
+.ssteps{
+    padding: 0;
+    width: 600px;
+}
+.ssteps li{
+    list-style: none;
+    border: 2px solid #6A9AB0;
+    padding: 2em;
+    margin: 12px;
+    width: 50%;
+    float: left;
+    position: relative;
+    :after {
+        content:"";
+        height:64%;
+        border-top:2px solid #6A9AB0;
+        border-right:2px solid #6A9AB0;
+        width:25%;
+        position:absolute;
+        left:100%;
+        top:50%;
+}
+}
+.ssteps li:nth-child(even){
+    float: right;
+    :after {
+        left:auto;
+        right:100%;
+        border-right:none;
+        border-left:2px solid #6A9AB0;
+    }
+}
+.ssteps li:nth-child(3){
+    :after{
+        display: none;
+    }
+}
+
+
+/* .landingImage{
     position: relative;
     display: flex;
     justify-content: center;
     perspective: 500px;
     transition: all 0.15s;
     margin-top: 5rem;
-}
-.landingImage:hover img{
+} */
+/* .landingImage:hover img{
     transform: rotateX(45deg);
 }
 .landingImage:hover .popUp{
@@ -136,7 +199,7 @@ nav li a{
     font-weight: 700;
     transition: all 0.15s;
     text-shadow: #3A6D8C 5px 3px 2px;
-}
+} */
 
 @media only screen and (max-width: 480px) {
     .nav-menu{
@@ -172,4 +235,7 @@ nav li a{
         left: 0;
         width: 80%;
     } 
+    .ssteps{
+        width: 470px;
+    }
 }

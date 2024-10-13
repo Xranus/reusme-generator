@@ -2,3 +2,6 @@
     font-family: 'Ubuntu';
     color: #EAD8B1;
 }
+html{
+    scroll-behavior: smooth;
+}
