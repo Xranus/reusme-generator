@@ -41,7 +41,7 @@
     width: 101px;
     height: 101px;
     bottom: -101px;
-    animation-delay: 1s;
+
 }
 .background li:nth-child(1) {
     left: 83%;
