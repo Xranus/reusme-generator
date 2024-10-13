@@ -63,15 +63,16 @@ nav li a{
 @media only screen and (max-width: 480px) {
     .nav-menu{
         position: fixed;
-        justify-content: center;
         background-color: rgba(255, 255, 255, 0.1);
         padding: 0;
-        margin-top: 70px;
         flex-direction: column;
-        width: 432px;
+        width: 0;
         left: -100%;
         backdrop-filter: blur(15px);
-        height: 300px;
+        height: 100vh;
+    }
+    .nav-menu li{
+        margin-top: 30px;
     }
     .hamburger{
         display: flex;
@@ -88,6 +89,7 @@ nav li a{
         transform: translateY(-9px) rotate(-45deg);
     }
     .nav-menu.active{
-        left: 5%;
+        left: 0;
+        width: 80%;
     }
 }
