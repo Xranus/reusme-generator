@@ -66,7 +66,7 @@ function Landing() {
                 <p>Fill In Your Details</p>
                 <span>Input your personal information, experience, and skills.</span>
               </li>
-              <li data-aos="flip-right">
+              <li data-aos="flip-left">
                 <FaDownload />
                 <p>Download as PDF</p>
                 <span>Get your resume instantly in PDF format.</span>
@@ -77,7 +77,7 @@ function Landing() {
         <div className="landingButtons">
           <button><span>Start Making</span><GoArrowRight className="forwardArrow" /></button>
         </div>
-        <div className="FAQ">
+        <div className="FAQ" data-aos="fade-down">
           <h3 style={{marginLeft: '12px'}}>FAQ</h3>
           <Collapse accordion>
             <Panel header="How much does it cost?" key="1">
