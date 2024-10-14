@@ -115,22 +115,25 @@ nav li a{
 }
 .keyFeatures ul{
     padding: 0;
+
+
 }
 .keyFeatures li{
     border: 1px solid #6A9AB0;
     list-style: none;
     padding: 0;
-    padding: 12px 20px;
+    padding: 20px 20px;
     font-weight: 500;
-    margin: 12px;
+    margin: 12px 0;
     transition: all 0.15s;
 }
 .keyFeatures li p{
     font-weight: 100;
+    margin: 0;
 }
 .ssteps{
     padding: 0;
-    width: 600px;
+    max-width: 600px;
 }
 .ssteps li{
     list-style: none;
@@ -207,16 +210,34 @@ nav li a{
         max-width: 480px;
         overflow: hidden;
     }
+
     .landingButtons button{
-        font-size: 12px;
+        font-size: 15px;
+    }
+    .landingButtons button span{
+        left: 0;
+    }
+    .forwardArrow{
+        opacity: 1;
+        translate: 0;
+    }
+    .keyFeatures ul{
+        max-width: 480px;
     }
     .keyFeatures li{
         width: 270px;
+        margin: 12px auto;
+    }
+    .steps{
+        max-width: 480px;
+        
     }
     .ssteps{
-        max-width: 480px;
+        max-width: auto;
         margin: 0;
-        margin-inline: 4%;
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
     }
     .ssteps li{
         :after{

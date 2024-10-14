@@ -21,7 +21,7 @@ function Landing() {
     <div className="landing">
       <div className="landingContent">
         <h1 className="headingText" data-aos="zoom-in-down">
-          Build and Download Your Resume Now <br /> Simple, Fast, Professional
+          Build and Download Your Resume Now! <br /><span style={{opacity: 0.8}}>Simple, Fast, Professional</span>
         </h1>
         <div className="landingButtons" data-aos="zoom-in-up">
           <button 
@@ -55,17 +55,17 @@ function Landing() {
           <div className="steps">
             <h3 style={{marginLeft: '12px'}}>How It Works (Steps)</h3>
             <ul className="ssteps">
-              <li>
+              <li data-aos="flip-left">
                 <HiCursorArrowRipple />
                 <p>Select a Template</p>
                 <span>Choose from a variety of professionally designed templates.</span>
               </li>
-              <li>
+              <li data-aos="flip-right">
                 <BiMessageSquareDetail />
                 <p>Fill In Your Details</p>
                 <span>Input your personal information, experience, and skills.</span>
               </li>
-              <li>
+              <li data-aos="flip-right">
                 <FaDownload />
                 <p>Download as PDF</p>
                 <span>Get your resume instantly in PDF format.</span>
