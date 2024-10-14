@@ -37,7 +37,7 @@ function Navbar() {
       <p><a href="/">Resume Generator</a></p>
       <div className="nav-menu" ref={navMenuRef}>
         <li><a onClick={closeNav} href="#">Templates</a></li>
-        <li><a onClick={closeNav} href="#">Github</a></li>
+        <li><a onClick={closeNav} target="_blank" href="https://github.com/Xranus/reusme-generator">Github</a></li>
         <li><a onClick={closeNav} href="#">Feedback</a></li>
       </div>
       <div onClick={handleNav} className="hamburger" ref={hamburgerRef}>
