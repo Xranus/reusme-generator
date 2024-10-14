@@ -168,6 +168,20 @@ nav li a{
         display: none;
     }
 }
+.FAQ{
+    max-width: 600px;
+}
+.ant-collapse{
+    border: 1px solid #3A6D8C;
+    border-radius: 0;
+    background-color: transparent;
+    width: auto;
+    margin: 12px auto;
+}
+
+.ant-collapse-content-box{
+    background-color: #6A9AB0;
+}
 
 
 
