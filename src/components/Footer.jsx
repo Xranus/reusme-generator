@@ -17,13 +17,7 @@ function Footer() {
             <FaLinkedin className='footerIconsShape'/>
         </a>
       </div>
-      <p>Copyright 2024 - All rights reserved by 
-        <a target='_blank' 
-            style={{textDecoration: 'none'}} 
-            href="https://github.com/Xranus">
-            Muhammad Hassan
-        </a>
-        </p>
+      <p>Copyright 2024 - All rights reserved by <a target='_blank' style={{textDecoration: 'none'}} href="https://github.com/Xranus">Muhammad Hassan</a></p>
     </div>
   )
 }

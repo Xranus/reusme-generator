@@ -87,7 +87,7 @@ function Landing() {
               <p><b>No</b> it doesn't require an account nor does it store any user data.</p>
             </Panel>
             <Panel header="Can I edit my resume after downloading?" key="3">
-              <p><b>Depends</b>. The pdf it downloads is ike a screenshot but you can convert it into editable word file using some tool online.</p>
+              <p><b>Depends</b>. The pdf it downloads is like a screenshot but you can convert it into editable word file using some tool online.</p>
             </Panel>
           </Collapse>
         </div>
