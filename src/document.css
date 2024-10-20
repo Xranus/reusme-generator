@@ -2,13 +2,12 @@
 .document{
     height: 1120px;
     width: 792px;
-    position: absolute;
-    left: 50%;
-    translate: -50%;
     font-family: 'Ubuntu';
     display: flex;
     justify-content: center;
     padding: 1px;
+    margin: 1px auto;
+    background-color: white;
 }
 .container{
     width: 620px;
@@ -21,13 +20,13 @@
     margin-top: 70px;
 }
 .position{
-    color: grey;
     margin-top: 2px;
 }
 .contact{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 600px;
 }
 .contact div{
     display: flex;
@@ -37,16 +36,18 @@
     margin-top: 0;
     font-size: small;
     margin-left: 10px;
+    color: black;
 }
 .icon{
-    color: grey;
     font-size: small;
     margin-top: 2px;
+    fill: grey;
 }
-h2{
+.document h3{
     position: relative;
+    color: black;
 }
-h2::after{
+.document h3::after{
     content: '';
     height: 2px;
     width: 100%;
@@ -55,4 +56,8 @@ h2::after{
     background-color: rgb(87, 87, 87);
     bottom: 0;
     left: 0;
+}
+.document p, .document li{
+    color: black;
+    font-size: small;
 }
