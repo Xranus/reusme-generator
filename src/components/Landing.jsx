@@ -6,6 +6,7 @@ import { HiCursorArrowRipple } from "react-icons/hi2"
 import { GoArrowRight } from "react-icons/go"
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { Link } from 'react-router-dom'
 
 function Landing({setLoading}) {
   const LearnRef = useRef(null)
@@ -34,7 +35,7 @@ function Landing({setLoading}) {
             onClick={handleScroll}>
             Learn More
           </button>
-          <button onClick={()=>setLoading(false)}><span>Start Making</span><GoArrowRight className="forwardArrow" /></button>
+          <Link to='/form'><button><span>Start Making</span><GoArrowRight className="forwardArrow" /></button></Link>
         </div>
 
         <section className="learnMore" ref={LearnRef}>

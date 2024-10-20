@@ -16,7 +16,12 @@ function App() {
     <>
       <Background />
       <Navbar />
-      {showlanding ? <Landing setLoading={setShowlanding} /> : <Form /> }
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Landing />} />
+          <Route path='/form' element={<Form />} />
+        </Routes>
+      </Router>
       <Footer />
     </>
   )
