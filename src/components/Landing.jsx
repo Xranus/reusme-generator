@@ -35,9 +35,8 @@ function Landing({setLoading}) {
             onClick={handleScroll}>
             Learn More
           </button>
-          <Link to='/form'><button><span>Start Making</span><GoArrowRight className="forwardArrow" /></button></Link>
+          <Link to='/templates'><button><span>Start Making</span><GoArrowRight className="forwardArrow" /></button></Link>
         </div>
-
         <section className="learnMore" ref={LearnRef}>
           <h2>Learn More</h2>
           <div className="keyFeatures">
@@ -76,7 +75,7 @@ function Landing({setLoading}) {
           </div>
         </section>
         <div className="landingButtons">
-          <button><span>Start Making</span><GoArrowRight className="forwardArrow" /></button>
+        <Link to='/templates'><button><span>Start Making</span><GoArrowRight className="forwardArrow" /></button></Link>
         </div>
         <div className="FAQ" data-aos="fade-down">
           <h3 style={{marginLeft: '12px'}}>FAQ</h3>

@@ -273,7 +273,25 @@ label span{
 .submitbutton:hover span{
     left: 0;
 }
-
+.templates{
+    width: 70%;
+    min-height: 88dvh;
+    margin-top: 3rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.templates img{
+    height: 300px;
+    cursor: pointer;
+    border: #3A6D8C 1px solid;
+    padding: 1rem;
+    max-width: 245px;
+}
 
 
 @media only screen and (max-width: 480px) {

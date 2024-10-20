@@ -8,30 +8,6 @@ import { usePDF } from 'react-to-pdf';
 
 function Document({obg}) {
   const {toPDF, targetRef} = usePDF({filename:"file.pdf"})
-
-  const information = {
-
-      name: 'Muhammad Hassan',
-      position: 'Front End Web Developer',
-      phone: '03243336401',
-      email: 'mehassan3454@gmail.com',
-      adress: 'samaSatta',
-      externalLinks: 'any',
-
-      experience: [
-        {companyName: "Google",designation: 'Software Engineer',years: '3 years'},
-      ],
-      skills: [
-        'java', 'C++', 'HTML', 'CSS', 'JS', 'React'
-      ],
-      achievements: [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, soluta. Corrupti, ad?"
-      ],
-      education:[
-        {degree: 'Bachelors', program: 'Computer Science', grade: 'A', institute: "Islamia University Bahawalpur"}
-      ],
-      summary: "will figure it out using AI"
-  }
   const [info] = useState(obg)
   const exptemp = [
     (el) => `Served as a ${el.designation} at ${el.companyName} for ${el.years}, contributing to key projects and business goals.`,
@@ -50,7 +26,9 @@ function Document({obg}) {
 
   return (
     <div>
-      <button className='downloadBtn' onClick={()=> toPDF()}>Download</button>
+      <button className='downloadBtn' onClick={()=> {
+        toPDF()
+        }}>Download</button>
     <div className='border'>
     <div className='document' ref={targetRef}>
       <div className='container'>

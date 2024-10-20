@@ -3,7 +3,6 @@ import React, { useRef, useEffect } from 'react';
 function Navbar() {
   const hamburgerRef = useRef(null);
   const navMenuRef = useRef(null);
-
   function handleNav() {
     hamburgerRef.current.classList.toggle('active');
     navMenuRef.current.classList.toggle('active');
@@ -36,7 +35,6 @@ function Navbar() {
     <nav>
       <p><a href="/">Resume Generator</a></p>
       <div className="nav-menu" ref={navMenuRef}>
-        <li><a onClick={closeNav} href="#">Templates</a></li>
         <li><a onClick={closeNav} target="_blank" href="https://github.com/Xranus/reusme-generator">Github</a></li>
         <li><a onClick={closeNav} href="#">Feedback</a></li>
       </div>

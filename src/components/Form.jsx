@@ -52,9 +52,8 @@ function Form({infofn}) {
       experience: experienceArray,
       achievements: achievmentArray,
     };
-  console.log(information)
     infofn(information)
-    navigate('/document')
+    navigate('/selected')
   };
   
   return (
