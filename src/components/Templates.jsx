@@ -10,7 +10,7 @@ function Templates({setTemp}) {
     const templatesArray = [
         {
             Name: "Document",
-            Image: "src/photos/Document.png"
+            Image: "https://github.com/Xranus/reusme-generator/blob/main/src/photos/Document.png?raw=true"
         },
         {
             Name: "comimng soon",
