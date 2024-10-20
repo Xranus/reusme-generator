@@ -61,3 +61,22 @@
     color: black;
     font-size: small;
 }
+.downloadBtn{
+    background-color: transparent;
+    border: 1px solid #EAD8B1;
+    color: #EAD8B1;
+    padding: 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 3rem 0 3rem 0;
+}
+
+@media only screen and (max-width: 480px){
+    .border{
+        max-width: 100vh;
+        overflow-x: scroll;
+    }
+}

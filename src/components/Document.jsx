@@ -5,8 +5,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaLink } from "react-icons/fa";
 import { usePDF } from 'react-to-pdf';
-import { Button } from 'antd';
-import { MdOutlineFileDownload } from "react-icons/md";
+
 function Document({obg}) {
   const {toPDF, targetRef} = usePDF({filename:"file.pdf"})
 
@@ -51,6 +50,8 @@ function Document({obg}) {
 
   return (
     <div>
+      <button className='downloadBtn' onClick={()=> toPDF()}>Download</button>
+    <div className='border'>
     <div className='document' ref={targetRef}>
       <div className='container'>
         <p className='Name' style={{fontSize: '2.5rem'}}>{info.name}</p>
@@ -132,11 +133,7 @@ function Document({obg}) {
         </div>
       </div>
     </div>
-    <Button style={{
-      backgroundColor: "transparent",
-      display:'flex',
-      
-    }} icon={<MdOutlineFileDownload />}  iconPosition='end'onClick={()=> toPDF()}>Download</Button>
+    </div>
     </div>
   )
 }

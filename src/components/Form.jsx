@@ -58,7 +58,7 @@ function Form({infofn}) {
   };
   
   return (
-    <div className='form' data-aos="fade-left">
+    <form className='form' data-aos="fade-left" onSubmit={handleSubmit}>
       <div className='information'>
         <div>
           <h1>Personal Information</h1>
@@ -66,35 +66,35 @@ function Form({infofn}) {
           <input type="text" placeholder='John Doe' name="name" id="Iname" required />
           
           <label htmlFor="position">Position you're aiming for <span>*</span></label>
-          <input type="text" placeholder='Frontend Web Developer' id='position' name='position' />
+          <input required type="text" placeholder='Frontend Web Developer' id='position' name='position' />
           
           <label htmlFor="email">Email <span>*</span></label>
-          <input type='email' placeholder='unknown@example.com' id='email' name='email' />
+          <input required type='email' placeholder='unknown@example.com' id='email' name='email' />
           
           <label htmlFor="adress">Address <span>*</span></label>
-          <input type='text' placeholder='John Doe, 456 Elm Street, Suite 3, Los Angeles, CA 90001, USA' id='adress' name='adress' />
+          <input required type='text' placeholder='John Doe, 456 Elm Street, Suite 3, Los Angeles, CA 90001, USA' id='adress' name='adress' />
           
           <label htmlFor="phone">Phone <span>*</span></label>
-          <input type='text' placeholder='(555) 555-1234' id='phone' name='phone' />
+          <input required type='text' placeholder='(555) 555-1234' id='phone' name='phone' />
           
           <label htmlFor="link">Any External Links related to you <span>*</span></label>
-          <input type='text' placeholder='example.com' id='link' name='link' />
+          <input required type='text' placeholder='example.com' id='link' name='link' />
 
           <h1>Education</h1>
           <div className='information'>
             {eduArray.map((edu, index) => (
               <div key={index} data-aos="fade-up">
                 <label htmlFor={`degree-${index}`}>Degree</label>
-                <input type="text" name="degree" id={`degree-${index}`} placeholder="Bachelors" value={edu.degree} onChange={(e) => handleChange(e, index, eduArray, setEduArray)} />
+                <input required type="text" name="degree" id={`degree-${index}`} placeholder="Bachelors" value={edu.degree} onChange={(e) => handleChange(e, index, eduArray, setEduArray)} />
 
                 <label htmlFor={`program-${index}`}>Program</label>
-                <input type="text" name="program" id={`program-${index}`} placeholder="Computer Science" value={edu.program} onChange={(e) => handleChange(e, index, eduArray, setEduArray)} />
+                <input required type="text" name="program" id={`program-${index}`} placeholder="Computer Science" value={edu.program} onChange={(e) => handleChange(e, index, eduArray, setEduArray)} />
 
                 <label htmlFor={`grade-${index}`}>Grade</label>
-                <input type="text" name="grade" id={`grade-${index}`} placeholder="A" value={edu.grade} onChange={(e) => handleChange(e, index, eduArray, setEduArray)} />
+                <input required type="text" name="grade" id={`grade-${index}`} placeholder="A" value={edu.grade} onChange={(e) => handleChange(e, index, eduArray, setEduArray)} />
 
                 <label htmlFor={`institute-${index}`}>Institute</label>
-                <input type="text" name="institute" id={`institute-${index}`} placeholder="ABC University" value={edu.institute} onChange={(e) => handleChange(e, index, eduArray, setEduArray)} />
+                <input required type="text" name="institute" id={`institute-${index}`} placeholder="ABC University" value={edu.institute} onChange={(e) => handleChange(e, index, eduArray, setEduArray)} />
               </div>
             ))}
             <CiSquarePlus onClick={handleMoreEdu} className='plus' />
@@ -104,7 +104,7 @@ function Form({infofn}) {
           <div className='skills'>
             {skillsArray.map((skill, index) => (
               <div key={index} data-aos="fade-up">
-                <input type="text" placeholder='JavaScript' value={skill} onChange={(e) => {
+                <input required type="text" placeholder='JavaScript' value={skill} onChange={(e) => {
                   const newSkills = [...skillsArray];
                   newSkills[index] = e.target.value;
                   setSkillsArray(newSkills);
@@ -119,13 +119,13 @@ function Form({infofn}) {
             {experienceArray.map((exp, index) => (
               <div key={index} data-aos="fade-up" >
                 <label htmlFor={`companyName-${index}`}>Company Name {index+1}</label>
-                <input type="text" name="companyName" id={`companyName-${index}`} placeholder="Google" value={exp.companyName} onChange={(e) => handleChange(e, index, experienceArray, setExperienceArray)} />
+                <input required type="text" name="companyName" id={`companyName-${index}`} placeholder="Google" value={exp.companyName} onChange={(e) => handleChange(e, index, experienceArray, setExperienceArray)} />
 
                 <label htmlFor={`designation-${index}`}>Designation</label>
-                <input type="text" name="designation" id={`designation-${index}`} placeholder="Software Engineer" value={exp.designation} onChange={(e) => handleChange(e, index, experienceArray, setExperienceArray)} />
+                <input required type="text" name="designation" id={`designation-${index}`} placeholder="Software Engineer" value={exp.designation} onChange={(e) => handleChange(e, index, experienceArray, setExperienceArray)} />
 
                 <label htmlFor={`years-${index}`}>Years</label>
-                <input type="text" name="years" id={`years-${index}`} placeholder="3 years" value={exp.years} onChange={(e) => handleChange(e, index, experienceArray, setExperienceArray)} />
+                <input required type="text" name="years" id={`years-${index}`} placeholder="3 years" value={exp.years} onChange={(e) => handleChange(e, index, experienceArray, setExperienceArray)} />
               </div>
             ))}
             <CiSquarePlus onClick={handleMoreExperience} className='plus' />
@@ -134,7 +134,7 @@ function Form({infofn}) {
           <div className='achievements'>
             {achievmentArray.map((achievements, index) => (
               <div key={index} data-aos="fade-up">
-                <input type="text" placeholder='' value={achievements} onChange={(e) => {
+                <input required type="text" placeholder='' value={achievements} onChange={(e) => {
                   const newAcheivements = [...achievmentArray];
                   newAcheivements[index] = e.target.value;
                   setAchievmentArray(newAcheivements);
@@ -143,12 +143,12 @@ function Form({infofn}) {
             ))}
             <CiSquarePlus onClick={handleMoreScheivements} className='plus' />
           </div>
-          <button className='submitbutton' onClick={handleSubmit}><span>Submit</span><GoArrowRight className="forwardArrow" /></button>
+          <button className='submitbutton' type='submit'><span>Submit</span><GoArrowRight className="forwardArrow" /></button>
         </div>
         
       </div>
       
-    </div>
+    </form>
   );
 }
 

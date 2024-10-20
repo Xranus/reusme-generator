@@ -247,6 +247,8 @@ label span{
 .plus{
     scale: 2;
     place-self: end;
+    cursor: pointer;
+    transition: all 0.15s;
 }
 .submitbutton{
     background-color: #3A6D8C;
