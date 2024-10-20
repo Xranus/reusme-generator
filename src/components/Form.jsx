@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
 import { CiSquarePlus } from "react-icons/ci";
 import { GoArrowRight } from "react-icons/go"
+import { useNavigate } from 'react-router-dom';
 
-function Form() {
+function Form({infofn}) {
+  const navigate = useNavigate()
   const [eduArray, setEduArray] = useState([{degree: '', program: '', grade: '', institute: ''}]);
   const [skillsArray, setSkillsArray] = useState(['']);
   const [experienceArray, setExperienceArray] = useState([{companyName: '', designation: '', years: ''}]);
@@ -50,8 +52,9 @@ function Form() {
       experience: experienceArray,
       achievements: achievmentArray,
     };
-  
-    console.log(information)
+  console.log(information)
+    infofn(information)
+    navigate('/document')
   };
   
   return (

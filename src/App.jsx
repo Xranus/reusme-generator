@@ -10,8 +10,8 @@ import Document from './components/Document'
 
 
 function App() {
-  const [showlanding, setShowlanding] = useState(true)
-
+  const [allInfo, setAllinfo] = useState({})
+  
   return (
     <>
       <Background />
@@ -19,7 +19,8 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<Landing />} />
-          <Route path='/form' element={<Form />} />
+          <Route path='/form' element={<Form infofn={setAllinfo} />} />
+          <Route path='/document' element={<Document obg={allInfo} />} />
         </Routes>
       </Router>
       <Footer />

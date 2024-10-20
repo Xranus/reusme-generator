@@ -4,7 +4,11 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaLink } from "react-icons/fa";
-function Document({rref}) {
+import { usePDF } from 'react-to-pdf';
+import { Button } from 'antd';
+import { MdOutlineFileDownload } from "react-icons/md";
+function Document({obg}) {
+  const {toPDF, targetRef} = usePDF({filename:"file.pdf"})
 
   const information = {
 
@@ -29,7 +33,7 @@ function Document({rref}) {
       ],
       summary: "will figure it out using AI"
   }
-  const [info] = useState(information)
+  const [info] = useState(obg)
   const exptemp = [
     (el) => `Served as a ${el.designation} at ${el.companyName} for ${el.years}, contributing to key projects and business goals.`,
     (el) => `Worked as a ${el.designation} at ${el.companyName} for ${el.years}, responsible for delivering high-quality solutions in line with the company’s objectives.`,
@@ -46,7 +50,8 @@ function Document({rref}) {
   ]
 
   return (
-    <div className='document' ref={rref}>
+    <div>
+    <div className='document' ref={targetRef}>
       <div className='container'>
         <p className='Name' style={{fontSize: '2.5rem'}}>{info.name}</p>
         <p className='position' style={{color: 'grey'}}>{info.position}</p>
@@ -123,17 +128,15 @@ function Document({rref}) {
           </ul>
         </div>
         <div>
-          <h3>SUMMARY / WHY HIRE YOU?</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Ipsa fugit dolorem tempore mollitia a, 
-            non provident laborum! Saepe ipsam eius voluptatibus corrupti nulla!
-             Dolore quas nostrum perferendis obcaecati suscipit voluptatibus laudantium qui deleniti illum repellendus?
-              Dolore necessitatibus facilis nulla dolorem veniam totam, 
-              veritatis error voluptate at aliquid maiores aliquam quas!
-          </p>
+              
         </div>
       </div>
+    </div>
+    <Button style={{
+      backgroundColor: "transparent",
+      display:'flex',
+      
+    }} icon={<MdOutlineFileDownload />}  iconPosition='end'onClick={()=> toPDF()}>Download</Button>
     </div>
   )
 }
